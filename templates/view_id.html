@@ -1,0 +1,65 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"crossorigin="anonymous">
+<script type="text/javascript" src="{{ url_for('static', filename = 'view_id.js') }}"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>	
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+<script>
+    let films = {{films|tojson}} 
+    let id = {{id|tojson}} 
+    console.log(films)
+</script>
+
+
+<div class = "container">
+    <div class = "filmDisplay">
+        <div class = "row">
+            <div class = "filmTitle"></div>
+        </div>
+        <div class = "row">
+            <div class = "director"></div>
+        </div>
+        <div class = "row" id = "photoAndNoms">
+            <div class = "col-md-7">
+                <div class = "filmPhoto"></div>
+            </div>
+            <div class = "col-md-5">
+                <div class = "nominationHeader"></div>
+                <div class = "nominations"></div>
+            </div>
+        </div>
+        <div class = "extraInfo">
+            <div class = "row">
+                <div class = "extraHeader" id = "summaryHeader" ></div>
+            </div>
+            <div class = "row">
+                <div id = "summary" ></div>
+            </div>
+            <div class = "row">
+                <div class = "extraHeader" id = "actorsHeader" ></div>
+            </div>
+            <div class = "row">
+                <div id = "actors" ></div>
+            </div>
+            <div class = "row">
+                <div class = "extraHeader" id = "runtimeHeader" ></div>
+            </div>
+            <div class = "row">
+                <div id ="runtime"></div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "editBTN"></div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

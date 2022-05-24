@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+<div class = "container"> 
+    <div class = "update">
+        </br>
+        <span id = "systemUpdate"></span>
+        </br>
+    </div>
+    <div class = "row" id = "addHeader">
+        <div class = "col-md-12">
+            <h1>Add a new film</h1>
+        </div>
+    </div>
+    <div class = "row" id = "input">
+        <div class = "col-md-2">
+            <label> Title: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "title">
+                <input type="text" class = "input" id="titleInput" placeholder= "Title">
+                <span id = "titleAlert" class = "alert" ></span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <label> Director: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "directorInput">
+                <input type="text" class = "input" id="directorInput" placeholder="Director">
+                <span id = "directorAlert" class = "alert" ></span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <label> Nominations: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "nominationsInput">
+                <input type="text" class = "input" id="nominationsInput" placeholder= "Nominations">
+                <span id = "nominationsAlert" class = "alert" ></span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <label> Image links: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "image">
+                <input type="text" class = "input" id="imageInput" placeholder="Image Link">
+                <span id = "imageAlert" class = "alert" ></span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <label> Actors: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "actors">
+                <input type="text" class = "input" id="actorInput" placeholder= "Actors">
+                <span id = "actorsAlert" class = "alert" ></span>
+            </div>
+        </div>
+        <div class = "col-md-2">
+            <label> Summary: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "summary">
+                <input type="text" class = "input" id="summaryInput" placeholder="Summary">
+                <span id = "summaryAlert" class = "alert" ></span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <label> Runtime: </label>
+        </div>
+        <div class = "col-md-4">
+            <div class = "runtime">
+                <input type="text" class = "input" id="runtimeInput" placeholder="Runtime">
+                <span id = "runtimeAlert" class = "alert" ></span>
+            </div>
+        </div>
+    </div>
+    <div class = "row">
+        <div class = "col-md-2">
+            <div class = "reasubmitsums">
+                <button id = "submit" disableddocument.getElementById("disabled").disabled = false;> Submit </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+

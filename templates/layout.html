@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+<!-- jquery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+    <title>2022 Oscar Nominations</title>
+</head>
+<body>
+  
+      
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <div class = "header" id = "navHeader">
+        <a class="navbar-brand" href="/" id = "oscarNom">2022 Oscar Nominations</a>
+        <a class="navbar-brand" href="/add" id = "addFilm">Add a film</a>
+      </div>  
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <input type="search" name = "text" id = "searchInput" placeholder="Search">
+          <button type="search" id = "searchBTN"> Search </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="content">   
+          {% block content %}
+          {% endblock %}
+  </div>
+</body>
+</html>

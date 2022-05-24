@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'homePage.js') }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+
+<script>
+    let films = {{films|tojson}} 
+    console.log(films)
+</script>
+
+<div class = "container">
+    <div class = "header">
+        <img src = "https://images.fastcompany.net/image/upload/w_596,c_limit,q_auto:best,f_auto/fc/3027088-inline-i-oscars.jpg" alt = "Oscar Logo" id = "oscarLogo">
+        <h5>Please use this site to search for any 2022 Oscar nominated film</h5>
+        </br>
+    </div>
+    <div class = "recs">
+
+        <h5> Here are some staff picks: </h5>
+        <div class="row" id = "picks" > </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}

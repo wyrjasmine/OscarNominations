@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'searchResults.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'layout.js') }}"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha256-/ykJw/wDxMa0AQhHDYfuMEwVb4JHMx9h4jD4XvHqVzU=" crossorigin="anonymous" />
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+<script>
+    let results = {{results|tojson}}    
+    let resultsTitle = {{resultsTitle|tojson}}
+    let resultsDirector = {{resultsDirector|tojson}}
+    let resultsNoms = {{resultsNoms|tojson}}
+    let text = {{text|tojson}}
+
+    console.log(results)
+    console.log(resultsTitle)
+    console.log(resultsDirector)
+    console.log(resultsNoms)
+</script>
+
+
+<div class = "container">
+    <div class = "searchResult">
+        <div class = "resultHeader"></div>
+
+        <div class = "row" id = "resultDisplay">
+            <div class="navbar-nav" id = "resultsT"></div>
+        </div>
+        <div class = "row" id = "resultDisplay"> 
+            <div class="navbar-nav" id = "resultsDr"></div>
+        </div>
+        <div class = "row"id = "resultDisplay">  
+            <div class="navbar-nav" id = "resultsNoms"></div>
+        </div>
+    </div>
+    <div class = "filmDisplay">
+        <div class = "filmTitle"></div>
+        <div class = "filmPhoto"></div>
+        <div class = "nominations"></div>
+        <div class = "director"></div>
+        <div class = "actors"></div>
+        <div class = "summary"></div>
+        <div class = "runtime"></div>
+    </div>
+
+</div>
+
+{% endblock %}
